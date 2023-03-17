@@ -80,6 +80,7 @@ try{
         }
     }
     
+    Rename-LocalUser -Name "Administrator" -NewName "labadmin"
     $UserAccount = Get-LocalUser -Name "labadmin"
     $UserAccount | Set-LocalUser -Password $Password
     Set-LocalUser -Name "labadmin" -PasswordNeverExpires 1
